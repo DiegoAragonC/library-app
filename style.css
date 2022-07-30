@@ -1,0 +1,41 @@
+#container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 200px);
+    gap: 24px;
+    padding: 50px;
+}
+
+.card {
+    box-sizing: border-box;
+    background-color: antiquewhite;
+    color: darkcyan;
+    width: 200px;
+    min-height: 200px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    
+}
+
+.card-options { 
+    display: flex;
+    justify-content: space-around;    
+    width: 100%;
+}
+
+#add-button {
+    margin: 32px;
+    border: none;
+    background-color: #fff;
+}
+
+.add-form {
+    display: none;
+}
+
+fieldset {
+    border: none;
+}
