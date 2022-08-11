@@ -19,6 +19,33 @@ buttonSumbit.addEventListener('click', () => {
     displayBookForm();
 });
 
+
+class Book {
+    constructor(title, author, pagenum, read) {
+        this.title = title;
+        this.author = author;
+        this.pagenum = pagenum;
+        this.read = read;
+    }
+    info() {
+        let haveRead = this.read ? "already read." : "not read yet.";
+        return '"' + this.title + '"' + " by " + this.author + ", " + this.pagenum.toString() + " pages, " + haveRead;
+    }
+}
+
+/*
+function Book(title, author, pagenum, read) {
+    this.title = title;
+    this.author = author;
+    this.pagenum = pagenum;
+    this.read = read;
+    this.info = function () {
+        let haveRead = this.read ? "already read." : "not read yet." 
+        return '"' + this.title + '"' + " by " + this.author + ", " + this.pagenum.toString() + " pages, " + haveRead;
+    }
+}
+*/
+
 function displayBookForm() {
     let bookForm = document.querySelector('.add-form');
     if (displayingBookForm) {
@@ -39,16 +66,6 @@ function resetFields() {
     pagesField.value = "";
 }
 
-function Book(title, author, pagenum, read) {
-    this.title = title;
-    this.author = author;
-    this.pagenum = pagenum;
-    this.read = read;
-    this.info = function () {
-        let haveRead = this.read ? "already read." : "not read yet." 
-        return '"' + this.title + '"' + " by " + this.author + ", " + this.pagenum.toString() + " pages, " + haveRead;
-    }
-}
 
 function addBook(title, author, pagenum, read) {
     let book = new Book(title, author, pagenum, read);
